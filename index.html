@@ -4,32 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Onpreeya Rompho</title>
+    
     <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Tailwind CSS -->
+    
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        navy: {
-                            500: '#1e3a8a',
-                            700: '#1e3a5f',
-                            900: '#0f172a',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    
+    <!-- External Tailwind Config -->
+    <script src="tailwind.config.js"></script>
+    
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-50 text-gray-800 antialiased">
 
     <!-- Sticky Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-navy-900 text-white shadow-lg border-b border-navy-700">
@@ -253,6 +241,26 @@
                     </div>
                     <div class="mt-4 pt-4 border-t border-gray-100">
                         <button onclick="openModal('modal-proj-4')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
+                            อ่านเพิ่ม (Read More)
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Rompho Digital Frame Stock -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-navy-800 group-hover:text-blue-600 transition-colors">Frame Stock Rompho Digital - Inventory Management System</h4>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ml-2">Personal Project</span>
+                        </div>
+                        <p class="text-sm font-semibold text-blue-500 mb-3">Role: Full Stack Deverloper</p>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            An online picture frame inventory management system developed to assist in managing product quantities, pricing, and access privileges between staff members and general users.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <button onclick="openModal('modal-proj-5')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
                             อ่านเพิ่ม (Read More)
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </button>
@@ -482,6 +490,47 @@
         </div>
     </div>
 
+    <!-- Modal 5: Frame Stock Rompho Digital -->
+    <div id="modal-proj-5" class="modal-overlay hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
+            <div class="p-6 md:p-8 relative">
+                <button onclick="closeModal('modal-proj-5')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <h3 class="text-2xl font-bold text-navy-900 mb-2 pr-8">Frame Stock Rompho Digital - Inventory Management System</h3>
+                <p class="text-blue-600 font-semibold mb-6">Role: Full Stack Deverloper</p>
+                
+                <div class="space-y-4 text-gray-600 text-sm md:text-base">
+                    <p>This project is designed using a Client-Server Architecture, separating the operations into two main components for flexibility and data management security:</p>
+                    
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Frontend:</strong> Developed using Single-page HTML, Tailwind CSS, and Vanilla JavaScript. It serves as a dashboard displaying product tables and supports Role-Based Access Control (Guest users can view stock only, while Staff users must enter a password [123456] to add, reduce, or edit data).</li>
+                        <li><strong>Backend:</strong> Developed with Node.js and Express.js, acting as a RESTful API to handle requests from the frontend and manage the database.</li>
+                        <li><strong>Database:</strong> Uses PostgreSQL hosted on Supabase Cloud, connected via a Connection String to ensure security and 24/7 data storage stability.</li>
+                        <li><strong>Generative AI:</strong> Gemini</li>
+                    </ul>
+                </div>
+
+                <!-- Project 5 Links -->
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="https://frame-stock.vercel.app/" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg transition-colors border border-blue-200 flex items-center gap-2 text-sm shadow-sm">
+                        <i class="fa-solid fa-globe"></i> Frame Stock Website
+                    </a>
+                    <a href="https://github.com/nameisonpreeya/Frame-Stock-Front-end.git" target="_blank" class="bg-gray-800 text-white hover:bg-gray-900 font-medium py-2 px-4 rounded-lg transition-colors border border-gray-700 flex items-center gap-2 text-sm shadow-sm">
+                        <i class="fa-brands fa-github text-lg"></i> Frontend
+                    </a>
+                    <a href="https://github.com/nameisonpreeya/Frame-Stock-Back-end.git" target="_blank" class="bg-gray-800 text-white hover:bg-gray-900 font-medium py-2 px-4 rounded-lg transition-colors border border-gray-700 flex items-center gap-2 text-sm shadow-sm">
+                        <i class="fa-brands fa-github text-lg"></i> Backend
+                    </a>
+                </div>
+
+                <div class="mt-8 text-right border-t border-gray-100 pt-4">
+                    <button onclick="closeModal('modal-proj-5')" class="bg-navy-700 hover:bg-navy-900 text-white font-medium py-2 px-6 rounded-lg transition-colors">ปิด (Close)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-navy-900 text-gray-400 py-8 text-center text-sm mt-8 border-t border-navy-700">
         <p>© 2027 Onpreeya Rompho. All Rights Reserved.</p>
@@ -492,18 +541,15 @@
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.classList.remove('hidden');
-            // Prevent background scrolling
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.classList.add('hidden');
-            // Restore background scrolling
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside the content box
         window.onclick = function(event) {
             if (event.target.classList.contains('modal-overlay')) {
                 event.target.classList.add('hidden');
@@ -511,7 +557,6 @@
             }
         }
 
-        // Close modal on Escape key press
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const modals = document.querySelectorAll('.modal-overlay');
@@ -526,8 +571,3 @@
     </script>
 </body>
 </html>
-```<ElicitationsGroup message="If you need anything else updated for your portfolio:">
-<Elicitation label="Update education section" query="Can you help me update the education section in this HTML code with a new GPA and coursework?"/>
-<Elicitation label="Review mobile layout" query="Can you check if my portfolio's HTML structure and Tailwind classes are fully mobile responsive?"/>
-</ElicitationsGroup>
-<FollowUp label="Would you like me to adjust the colors or layout of your portfolio page as well?" query="Yes, please give me a few suggestions for Tailwind color palette updates or layout improvements for this portfolio."/>
