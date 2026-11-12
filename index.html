@@ -1,268 +1,286 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Onpreeya Rompho</title>
     
+    <!-- Google Fonts (Prompt) -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- External Tailwind Config -->
-    <script src="tailwind.config.js"></script>
     
     <!-- External Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body>
 
     <!-- Sticky Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-navy-900 text-white shadow-lg border-b border-navy-700">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <!-- Navigation Links -->
-            <ul class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base font-medium">
-                <li><a href="#summary" class="hover:text-blue-400 transition-colors">Summary</a></li>
-                <li><a href="#education" class="hover:text-blue-400 transition-colors">Education</a></li>
-                <li><a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a></li>
-                <li><a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a></li>
-                <li><a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
             </ul>
-            <!-- Social Icons -->
-            <div class="flex items-center gap-5 text-xl">
-                <a href="https://web.facebook.com/onpreeya.rompho/" target="_blank" class="hover:text-blue-500 transition-colors" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/bambilalarain/" target="_blank" class="hover:text-pink-500 transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/nameisonpreeya" target="_blank" class="hover:text-gray-400 transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <div class="social-icons">
+                <a href="https://web.facebook.com/onpreeya.rompho/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/bambilalarain/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/nameisonpreeya" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <header class="bg-navy-900 text-white py-16 px-6 shadow-md relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div class="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-            <!-- Profile Image (Left) -->
-            <div class="flex-shrink-0">
-                <img src="IMG_5220.JPG" alt="Onpreeya Rompho" class="w-48 md:w-56 h-auto rounded-2xl shadow-2xl border-4 border-navy-700 object-cover bg-white">
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="profile-image">
+                <img src="IMG_5220.JPG" alt="Onpreeya Rompho">
             </div>
-            
-            <!-- Personal Info (Right) -->
-            <div class="flex-1 text-center md:text-left md:pt-4">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Onpreeya Rompho</h1>
-                <h2 class="text-xl md:text-2xl font-light text-blue-200 mb-6">อรปรียา ร่มโพธิ์</h2>
-                
-                <div class="flex flex-col md:flex-row items-center md:justify-start gap-3 md:gap-6 text-sm md:text-base text-gray-300">
-                    <a href="mailto:onpeeya5355@gmail.com" class="hover:text-white transition flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                        onpeeya5355@gmail.com
+            <div class="hero-info">
+                <h1>Onpreeya Rompho</h1>
+                <h2>อรปรียา ร่มโพธิ์</h2>
+                <div class="contact-info">
+                    <a href="mailto:onpeeya5355@gmail.com">
+                        <i class="fa-solid fa-envelope"></i> onpeeya5355@gmail.com
                     </a>
-                    <span class="hidden md:block text-gray-500">|</span>
-                    <a href="tel:0961956120" class="hover:text-white transition flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                        096 195 6120
+                    <span class="divider">|</span>
+                    <a href="tel:0961956120">
+                        <i class="fa-solid fa-phone"></i> 096 195 6120
                     </a>
                 </div>
-                <div class="mt-4 text-sm text-gray-400 flex items-start md:items-center justify-center md:justify-start gap-2">
-                    <svg class="w-4 h-4 mt-0.5 md:mt-0 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                    <span class="text-left">9/117 De Lapis Charan 81, Charansanitwong Rd, Bang Ao, Bang Phlat, Bangkok 10700</span><br>
+                <div class="location-info">
+                    <i class="fa-solid fa-location-dot"></i> Bangkok, Thailand
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+    <main class="main-content">
 
         <!-- Summary Section -->
-        <section id="summary" class="scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-8 h-8 rounded-full bg-navy-500 text-white flex items-center justify-center font-bold">1</div>
-                <h3 class="text-2xl font-bold text-navy-900 border-b-2 border-blue-500 pb-1">Professional Summary</h3>
+        <section id="summary" class="section">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h3 class="section-title">Professional Summary</h3>
             </div>
-            <p class="text-gray-600 leading-relaxed text-lg bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                IT student with a hands-on approach to the Software Development Life Cycle (SDLC). Passionate about bridging system analysis with backend logic. Experienced in designing system architectures (DFD, Context Diagrams), structuring relational databases, and currently expanding skills into server-side development (Node.js).<br><br>
-                <span class="font-semibold text-navy-500">Objective:</span> Seeking a 2-month internship ( June 1 - July 31, 2027) to apply systematic analytical skills in helping the team deliver high-quality software that meets organizational goals.
-            </p>
+            <div class="card summary-card">
+                <p>
+                    Digital Science and Technology student with hands-on project experience in system analysis, business logic design, relational database management, and backend development. Familiar with Software Development Life Cycle (SDLC), requirements analysis, Context Diagrams, Data Flow Diagrams (DFD), and database design. Experienced in building backend applications using Node.js, Express.js, and PostgreSQL, including LINE Messaging API integration. Interested in applying analytical thinking and technical skills to understand business requirements, design effective system solutions, and develop reliable software.
+                </p>
+                <div class="objective-box">
+                    <span>Objective:</span> Seeking a 2-month internship opportunity from <strong>June 1 to July 31, 2027</strong>, in <strong>System Analysis</strong>, <strong>IT Analysis</strong>, or <strong>Backend Development</strong>.
+                </div>
+            </div>
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-8 h-8 rounded-full bg-navy-500 text-white flex items-center justify-center font-bold">2</div>
-                <h3 class="text-2xl font-bold text-navy-900 border-b-2 border-blue-500 pb-1">Education</h3>
+        <section id="education" class="section">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h3 class="section-title">Education</h3>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-navy-500">
-                <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
-                    <h4 class="text-xl font-bold text-gray-800">Mahidol University</h4>
-                    <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">August 2025 - Present</span>
+            <div class="card edu-card">
+                <div class="edu-header">
+                    <h4>Mahidol University</h4>
+                    <span class="badge badge-pink">August 2025 - Present</span>
                 </div>
-                <p class="text-gray-600 font-medium">Bachelor of Science in Digital Science and Technology (DST)</p>
-                <p class="text-gray-500 text-sm mt-1">Faculty of Information and Communication Technology | Salaya, Nakhon Pathom</p>
-                <div class="mt-4 inline-block bg-green-50 border border-green-200 text-green-700 font-semibold px-4 py-1.5 rounded-lg">
-                    GPA: 3.33
+                <p class="edu-degree">Bachelor of Science in Digital Science and Technology (DST)</p>
+                <p class="edu-location">Faculty of Information and Communication Technology | Salaya, Nakhon Pathom</p>
+                <div class="gpa-badge">GPA: 3.33</div>
+
+                <div class="edu-header mt-4">
+                    <h4>Uttaraditdaruni School</h4>
+                    <span class="badge badge-pink">2021 - 2024</span>
                 </div>
+                <p class="edu-degree">Science and Math</p>
+                <p class="edu-location">Uttaradit</p>
+                <div class="gpa-badge">GPA: 3.90</div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-8 h-8 rounded-full bg-navy-500 text-white flex items-center justify-center font-bold">3</div>
-                <h3 class="text-2xl font-bold text-navy-900 border-b-2 border-blue-500 pb-1">Skills & Proficiencies</h3>
+        <section id="skills" class="section">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h3 class="section-title">Skills & Proficiencies</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Tech Skills -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h4 class="text-lg font-bold text-navy-700 mb-4 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        Technology Skills
-                    </h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-500 font-bold">•</span>
-                            <div><span class="font-semibold text-gray-700">Development:</span> <span class="text-gray-600">Python, Java, JavaScript, Node.js, HTML/CSS</span></div>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-500 font-bold">•</span>
-                            <div><span class="font-semibold text-gray-700">Database:</span> <span class="text-gray-600">MySQL, Relational Database Design, Data Dictionary</span></div>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-500 font-bold">•</span>
-                            <div><span class="font-semibold text-gray-700">Analysis & Design:</span> <span class="text-gray-600">SDLC, Agile, DFD, Use Case, UI/UX (Figma)</span></div>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-blue-500 font-bold">•</span>
-                            <div><span class="font-semibold text-gray-700">Network & OS:</span> <span class="text-gray-600">Cisco IOS, VLAN, Packet Tracer, Wireshark, Linux System Administration (Ubuntu)</span></div>
-                        </li>
+            
+            <div class="skills-grid">
+                <!-- Track 1 -->
+                <div class="card skill-card border-top-pink">
+                    <h4><i class="fa-solid fa-sitemap text-pink"></i> System Analyst</h4>
+                    <ul class="skill-list">
+                        <li><span></span>Requirement Analysis</li>
+                        <li><span></span>Use Case & Context Diagram</li>
+                        <li><span></span>Data Flow Diagram (DFD)</li>
+                        <li><span></span>Entity Relationship Diagram (ERD)</li>
+                        <li><span></span>System Design & UI/UX (Figma)</li>
                     </ul>
                 </div>
 
-                <!-- Soft Skills -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h4 class="text-lg font-bold text-navy-700 mb-4 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        Soft Skills
-                    </h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Time management</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Attention to detail</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Communication</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Teamwork</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Problem-solving</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Fast learner</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium border border-gray-200">Analytical thinking</span>
-                    </div>
+                <!-- Track 2 -->
+                <div class="card skill-card border-top-rose">
+                    <h4><i class="fa-solid fa-chart-line text-rose"></i> IT Analyst</h4>
+                    <ul class="skill-list">
+                        <li><span></span>Business Process Analysis</li>
+                        <li><span></span>AS-IS / TO-BE Modeling</li>
+                        <li><span></span>Data Analysis & Data Mapping</li>
+                        <li><span></span>User Acceptance Testing (UAT)</li>
+                        <li><span></span>SDLC & Agile Methodology</li>
+                    </ul>
+                </div>
+
+                <!-- Track 3 -->
+                <div class="card skill-card border-top-fuchsia">
+                    <h4><i class="fa-solid fa-server text-fuchsia"></i> Backend Development</h4>
+                    <ul class="skill-list">
+                        <li><span></span>JavaScript, Node.js, Express.js</li>
+                        <li><span></span>REST API & Webhook Integration</li>
+                        <li><span></span>SQL (PostgreSQL, MySQL)</li>
+                        <li><span></span>Relational Database & Data Dictionary</li>
+                        <li><span></span>Python, Java, Linux (Ubuntu)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Common Skills -->
+            <div class="card common-skills-card">
+                <h4><i class="fa-solid fa-star text-rose"></i> Common & Professional Skills</h4>
+                <div class="tags-container">
+                    <span class="tag tag-pink">Problem Solving</span>
+                    <span class="tag tag-pink">Analytical Thinking</span>
+                    <span class="tag tag-pink">Communication</span>
+                    <span class="tag tag-pink">Team Collaboration</span>
+                    <span class="tag tag-pink">Documentation</span>
+                    <span class="tag tag-gray">Attention to Detail</span>
+                    <span class="tag tag-gray">Time Management</span>
+                    <span class="tag tag-gray">Fast Learner</span>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-8 h-8 rounded-full bg-navy-500 text-white flex items-center justify-center font-bold">4</div>
-                <h3 class="text-2xl font-bold text-navy-900 border-b-2 border-blue-500 pb-1">Academic Projects</h3>
+        <section id="projects" class="section">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h3 class="section-title">Academic & Personal Projects</h3>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="projects-grid">
                 
-                <!-- Project 1: Stray Dog Adoption -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold text-navy-800 group-hover:text-blue-600 transition-colors">Stray Dog Adoption and Owner Screening System</h4>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ml-2">August 2026 - Present</span>
+                <!-- Project 1 -->
+                <div class="card project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>Stray Dog Adoption and Owner Screening System</h4>
+                            <span class="badge badge-light-pink">August 2026 - Present</span>
                         </div>
-                        <p class="text-sm font-semibold text-blue-500 mb-3">Role: Project Lead & System Analyst & UI Designer</p>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            An end-to-end management platform for stray dog adoption, covering animal data management, screening potential adopters, and post-adoption tracking. Focusing on digitalizing manual workflows, alert systems, and statistical reporting.
-                        </p>
+                        <p class="project-role">Role: Project Lead, System Analyst & UI Designer</p>
+                        <div class="tags-container small-tags">
+                            <span class="tag tag-outline-pink">DFD (Level 0 & 1)</span>
+                            <span class="tag tag-outline-pink">UI/UX Mockup</span>
+                            <span class="tag tag-outline-gray">Workflow Analysis</span>
+                        </div>
+                        <p class="project-desc">End-to-end management platform for stray dog adoption, showcasing comprehensive <strong>Data Flow Diagrams (DFD)</strong> and interactive <strong>UI Mockups</strong> for animal profile management, adopter screening workflows, and post-adoption tracking.</p>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <button onclick="openModal('modal-proj-1')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
-                            อ่านเพิ่ม (Read More)
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <div class="project-footer">
+                        <button onclick="openModal('modal-proj-1')" class="btn-readmore">
+                            อ่านเพิ่ม (Read More) <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Project 2: LINE Tarot Bot -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold text-navy-800 group-hover:text-blue-600 transition-colors">แม่หมอแบมบี้ LINE Tarot Bot</h4>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ml-2">Personal Project</span>
+                <!-- Project 2 -->
+                <div class="card project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>แม่หมอแบมบี้ LINE Tarot Bot</h4>
+                            <span class="badge badge-light-pink">Personal Project</span>
                         </div>
-                        <p class="text-sm font-semibold text-blue-500 mb-3">Role: Backend Developer</p>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            A free-forever LINE Bot for tarot card readings, completely independent of external AI APIs to avoid quota limitations. Powered by Node.js, Express.js, and PostgreSQL.
-                        </p>
+                        <p class="project-role">Role: Backend Developer</p>
+                        <div class="tags-container small-tags">
+                            <span class="tag tag-outline-pink">Webhook</span>
+                            <span class="tag tag-outline-pink">LINE Messaging API</span>
+                            <span class="tag tag-outline-pink">Backend Flow</span>
+                        </div>
+                        <p class="project-desc">Automated LINE Bot built with <strong>Node.js, Express.js, and PostgreSQL</strong>. Demonstrates real-time <strong>Webhook</strong> event handling, <strong>LINE Messaging API</strong> integration, and deterministic <strong>Backend Flow</strong> logic without external AI quota limits.</p>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <button onclick="openModal('modal-proj-2')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
-                            อ่านเพิ่ม (Read More)
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <div class="project-footer">
+                        <button onclick="openModal('modal-proj-2')" class="btn-readmore">
+                            อ่านเพิ่ม (Read More) <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Project 3: LeKhaFong Production -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold text-navy-800 group-hover:text-blue-600 transition-colors">LeKhaFong Production</h4>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ml-2">August 2026 - Present</span>
+                <!-- Project 3 -->
+                <div class="card project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>LeKhaFong Production</h4>
+                            <span class="badge badge-light-pink">August 2026 - Present</span>
                         </div>
-                        <p class="text-sm font-semibold text-blue-500 mb-3">Role: Backend Developer & Database Designer</p>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            A rental service system for mirrorless cameras and accessories. Focuses on building a robust backend and database structure to support the management of product catalogs, customer data, and rental/return statuses.
-                        </p>
+                        <p class="project-role">Role: Backend Developer & Database Designer</p>
+                        <div class="tags-container small-tags">
+                            <span class="tag tag-outline-pink">Rental Logic</span>
+                            <span class="tag tag-outline-pink">Database Design (ERD)</span>
+                            <span class="tag tag-outline-gray">Data Dictionary</span>
+                        </div>
+                        <p class="project-desc">Camera and equipment rental management system focusing on structured <strong>Rental Logic</strong> (availability, booking states, return tracking) and normalized <strong>Relational Database Design</strong> with complete ERD and Data Dictionary.</p>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <button onclick="openModal('modal-proj-3')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
-                            อ่านเพิ่ม (Read More)
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <div class="project-footer">
+                        <button onclick="openModal('modal-proj-3')" class="btn-readmore">
+                            อ่านเพิ่ม (Read More) <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Project 4: KAMUTEA Database Management -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold text-navy-800 group-hover:text-blue-600 transition-colors">KAMUTEA Database Management System</h4>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ml-2">June 2026 - July 2026</span>
+                <!-- Project 4 -->
+                <div class="card project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>KAMUTEA Database Management System</h4>
+                            <span class="badge badge-light-pink">June 2026 - July 2026</span>
                         </div>
-                        <p class="text-sm font-semibold text-blue-500 mb-3">Role: System Analyst</p>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            Analyzed and designed data structures and business processes for KAMU KAMU. Centers on standardizing data to support a complex business model including storefront sales, delivery channels, and promotional campaigns.
-                        </p>
+                        <p class="project-role">Role: System Analyst</p>
+                        <div class="tags-container small-tags">
+                            <span class="tag tag-outline-pink">Data Mapping</span>
+                            <span class="tag tag-outline-pink">Business Process</span>
+                            <span class="tag tag-outline-gray">Business Rules</span>
+                        </div>
+                        <p class="project-desc">Enterprise data architecture analysis for KAMU KAMU, highlighting <strong>Business Process Analysis</strong> across storefront and delivery channels, along with 8-step <strong>Data Mapping</strong> and standardized business rules.</p>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <button onclick="openModal('modal-proj-4')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
-                            อ่านเพิ่ม (Read More)
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <div class="project-footer">
+                        <button onclick="openModal('modal-proj-4')" class="btn-readmore">
+                            อ่านเพิ่ม (Read More) <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
                 
-                <!-- Project 5: Rompho Digital Frame Stock -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col group">
-                    <div class="flex-grow">
-                        <div class="flex justify-between items-start mb-4">
-                            <h4 class="text-xl font-bold text-navy-800 group-hover:text-blue-600 transition-colors">Frame Stock Rompho Digital - Inventory Management System</h4>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ml-2">Personal Project</span>
+                <!-- Project 5 -->
+                <div class="card project-card full-width">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>Frame Stock Rompho Digital - Inventory Management System</h4>
+                            <span class="badge badge-light-pink">Personal Project</span>
                         </div>
-                        <p class="text-sm font-semibold text-blue-500 mb-3">Role: Full Stack Deverloper</p>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                            An online picture frame inventory management system developed to assist in managing product quantities, pricing, and access privileges between staff members and general users.
-                        </p>
+                        <p class="project-role">Role: Full Stack Developer</p>
+                        <div class="tags-container small-tags">
+                            <span class="tag tag-outline-pink">CRUD Operations</span>
+                            <span class="tag tag-outline-pink">PostgreSQL Database</span>
+                            <span class="tag tag-outline-pink">REST API</span>
+                            <span class="tag tag-outline-pink">Role-Based Auth</span>
+                        </div>
+                        <p class="project-desc">Full-stack online inventory management system built for real business operations. Implements complete <strong>CRUD</strong> functionality, <strong>RESTful API</strong> architecture (Node.js/Express), cloud <strong>PostgreSQL Database</strong> integration, and Role-Based <strong>Authentication</strong> separating Guest read-only views from Staff inventory controls.</p>
                     </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100">
-                        <button onclick="openModal('modal-proj-5')" class="text-blue-600 hover:text-blue-800 font-semibold text-sm flex items-center gap-1 transition-colors">
-                            อ่านเพิ่ม (Read More)
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <div class="project-footer">
+                        <button onclick="openModal('modal-proj-5')" class="btn-readmore">
+                            อ่านเพิ่ม (Read More) <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
@@ -271,301 +289,241 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-8 h-8 rounded-full bg-navy-500 text-white flex items-center justify-center font-bold">5</div>
-                <h3 class="text-2xl font-bold text-navy-900 border-b-2 border-blue-500 pb-1">Work Experience</h3>
+        <section id="experience" class="section">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h3 class="section-title">Work Experience</h3>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 relative overflow-hidden group">
-                <div class="absolute left-0 top-0 bottom-0 w-1 bg-gray-200 group-hover:bg-blue-500 transition-colors"></div>
-                <div class="flex flex-col md:flex-row justify-between md:items-center mb-4 pl-4">
-                    <h4 class="text-xl font-bold text-gray-800">Part-time Staff</h4>
-                    <span class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">April 2022 - July 2025</span>
+            <div class="card exp-card">
+                <div class="exp-header">
+                    <h4>Part-time Staff</h4>
+                    <span class="badge badge-gray">April 2022 - July 2025</span>
                 </div>
-                <h5 class="text-lg font-medium text-navy-600 mb-3 pl-4">Rompho Digital</h5>
-                <ul class="space-y-2 text-gray-600 pl-4 list-disc list-inside">
-                    <li><strong class="text-gray-700">Customer Service & Quality Control:</strong> Gathered specific customer requirements and conducted rigorous quality assurance checks to ensure zero defects before delivery.</li>
-                    <li><strong class="text-gray-700">Technical Support & Operations:</strong> Managed digital files (PDF, Word, JPG), resolved basic hardware issues, and efficiently handled multiple tasks in a fast-paced environment.</li>
+                <h5 class="exp-company">Rompho Digital</h5>
+                <ul class="exp-list">
+                    <li><strong>Customer Service & Quality Control:</strong> Gathered specific customer requirements and conducted rigorous quality assurance checks to ensure zero defects before delivery.</li>
+                    <li><strong>Technical Support & Operations:</strong> Managed digital files (PDF, Word, JPG), resolved basic hardware issues, and efficiently handled multiple tasks in a fast-paced environment.</li>
                 </ul>
             </div>
         </section>
         
     </main>
 
-    <!-- Modals -->
-    
-    <!-- Modal 1: Stray Dog Adoption Project -->
-    <div id="modal-proj-1" class="modal-overlay hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
-            <div class="p-6 md:p-8 relative">
-                <button onclick="closeModal('modal-proj-1')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-                <h3 class="text-2xl font-bold text-navy-900 mb-2 pr-8">Stray Dog Adoption and Owner Screening System</h3>
-                <p class="text-blue-600 font-semibold mb-6">Role: Project Lead & System Analyst & UI Designer</p>
-                
-                <div class="space-y-4 text-gray-600 text-sm md:text-base">
-                    <p>A comprehensive information system for managing the entire stray dog adoption process. This includes storing dog profiles and health records, publishing information on adoptable dogs, receiving and managing adoption requests, evaluating applicant suitability, scheduling interviews and home visits, preparing adoption documents, and conducting post-adoption follow-ups. Additionally, the system must store operational logs, trigger alerts for key activities, and generate statistical reports related to adoptions and dog care.</p>
-                    
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">🛠️ Tech Stack & Tools</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>System Analysis & Design:</strong> Data Flow Diagrams Level 1 (draw.io)</li>
-                        <li><strong>Generative AI:</strong> Claude, Gemini</li>
-                    </ul>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2027 Onpreeya Rompho. All Rights Reserved.</p>
+    </footer>
 
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">✨ Key Features & Deliverables</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>System Architecture:</strong> Designed a Level 1 DFD to illustrate the workflows and data flow within the system.</li>
-                    </ul>
-                </div>
-                
-                <!-- Project 1 Links -->
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a href="https://drive.google.com/file/d/183XzDqmJjj31qieO34ymOU8KP6idsOYP/view?usp=sharing" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg transition-colors border border-blue-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-file-pdf"></i> Report
-                    </a>
-                    <a href="https://nameisonpreeya.github.io/Mockup-StayMacth/" target="_blank" class="bg-indigo-50 text-indigo-700 hover:bg-indigo-100 font-medium py-2 px-4 rounded-lg transition-colors border border-indigo-200 flex items-center gap-2 text-sm">
-                        <i class="fa-brands fa-figma"></i> Mockup
-                    </a>
-                    <a href="pr1.html" target="_blank" class="bg-cyan-50 text-cyan-700 hover:bg-cyan-100 font-medium py-2 px-4 rounded-lg transition-colors border border-cyan-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-pr"></i> Preview
-                    </a>
-                </div>
+    <!-- Modals Container -->
 
-                <div class="mt-8 text-right border-t border-gray-100 pt-4">
-                    <button onclick="closeModal('modal-proj-1')" class="bg-navy-700 hover:bg-navy-900 text-white font-medium py-2 px-6 rounded-lg transition-colors">ปิด (Close)</button>
-                </div>
+    <!-- Modal 1: Stray Dog Adoption -->
+    <div id="modal-proj-1" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="closeModal('modal-proj-1')" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">Stray Dog Adoption and Owner Screening System</h3>
+            <p class="modal-role">Role: Project Lead, System Analyst & UI Designer</p>
+            
+            <div class="modal-body">
+                <p>A comprehensive information system designed to digitalize the entire stray dog adoption lifecycle—from dog profile and medical record management, adopter screening, and interview/home-visit scheduling to post-adoption follow-ups and statistical reporting.</p>
+                
+                <h4>🛠️ Tech Stack & Tools</h4>
+                <ul>
+                    <li><strong>System Analysis & Design:</strong> Context Diagram, Data Flow Diagrams Level 1 (draw.io)</li>
+                    <li><strong>UI/UX Prototyping:</strong> Interactive Web Mockup (HTML/CSS/JS)</li>
+                    <li><strong>Productivity & AI Tools:</strong> Claude, Gemini</li>
+                </ul>
+
+                <h4>✨ Key Deliverables</h4>
+                <ul>
+                    <li><strong>Data Flow Diagrams (DFD):</strong> Designed Level 0 and Level 1 DFDs mapping data movement across screening, approval, and alert subsystems.</li>
+                    <li><strong>Interactive UI Mockup:</strong> Built functional frontend prototypes demonstrating user flows for both adopters and shelter administrators.</li>
+                </ul>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://drive.google.com/file/d/183XzDqmJjj31qieO34ymOU8KP6idsOYP/view?usp=sharing" target="_blank" class="btn-link btn-pink"><i class="fa-solid fa-file-pdf"></i> Report</a>
+                <a href="https://strays.peerapeek.cc/" target="_blank" class="btn-link btn-rose"><i class="fa-brands fa-figma"></i> Mockup</a>
+                <a href="https://github.com/PeerapeeK/strays" target="_blank" class="btn-link btn-pink"><i class="fa-brands fa-github text-lg"></i> Coding</a>
+                <a href="pr1.html" target="_blank" class="btn-link btn-fuchsia"><i class="fa-solid fa-pr"></i> Preview</a>
+            </div>
+
+            <div class="modal-footer">
+                <button onclick="closeModal('modal-proj-1')" class="btn-close-text">ปิด (Close)</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2: แม่หมอแบมบี้ LINE Tarot Bot -->
-    <div id="modal-proj-2" class="modal-overlay hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
-            <div class="p-6 md:p-8 relative">
-                <button onclick="closeModal('modal-proj-2')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-                <h3 class="text-2xl font-bold text-navy-900 mb-2 pr-8">แม่หมอแบมบี้ LINE Tarot Bot (PostgreSQL Powered)</h3>
-                <p class="text-blue-600 font-semibold mb-6">Tarot Card Reading LINE Bot</p>
+    <!-- Modal 2: LINE Tarot Bot -->
+    <div id="modal-proj-2" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="closeModal('modal-proj-2')" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">แม่หมอแบมบี้ LINE Tarot Bot (PostgreSQL Powered)</h3>
+            <p class="modal-role">Role: Backend Developer</p>
+            
+            <div class="modal-body">
+                <p>A free-forever LINE Bot for tarot card readings, engineered independently of external AI APIs to avoid quota limitations (Error 429). Powered by Node.js, Express.js, and PostgreSQL.</p>
                 
-                <div class="space-y-4 text-gray-600 text-sm md:text-base">
-                    <p>A free-forever LINE Bot for tarot card readings, completely independent of external AI APIs to avoid quota limitations (Error 429). Powered by Node.js, Express.js, and a PostgreSQL database.</p>
-                    
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">✨ Key Features</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>☀️ Daily Horoscope (1 Card):</strong> Randomly draws a daily card complete with interpretations and upright/reversed status.</li>
-                        <li><strong>🔮 In-depth Reading (3 Cards):</strong> Past - Present - Future card spread for general inquiries.</li>
-                        <li><strong>🗄️ Database Driven:</strong> Retrieves all card meanings directly from PostgreSQL for lightning-fast, secure, and 100% free operation.</li>
-                        <li><strong>🎨 Rich Menu Support:</strong> Fully integrated with LINE OA floating menu buttons for seamless navigation without typing long commands.</li>
-                    </ul>
+                <h4>✨ Key Architecture & Features</h4>
+                <ul>
+                    <li><strong>🔗 Webhook & LINE Messaging API:</strong> Processes real-time incoming user messages and Rich Menu postback events via Express.js webhook endpoints using <code>@line/bot-sdk</code>.</li>
+                    <li><strong>⚙️ Deterministic Backend Flow:</strong> Routes user intents into 1-card daily draws or 3-card spreads (Past - Present - Future) with randomized upright/reversed state logic.</li>
+                    <li><strong>🗄️ Database-Driven Responses:</strong> Queries card interpretations directly from PostgreSQL for fast, reliable, and zero-cost operation.</li>
+                </ul>
 
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">🛠️ Tech Stack</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Backend:</strong> Node.js, Express.js</li>
-                        <li><strong>Database:</strong> PostgreSQL</li>
-                        <li><strong>Messaging API:</strong> @line/bot-sdk</li>
-                        <li><strong>Hosting / Deployment:</strong> Render</li>
-                        <li><strong>Generative AI:</strong> Gemini, ChatGPT (Used during development/training phase)</li>
-                    </ul>
+                <h4>🛠️ Tech Stack</h4>
+                <ul>
+                    <li><strong>Backend:</strong> Node.js, Express.js</li>
+                    <li><strong>Database:</strong> PostgreSQL</li>
+                    <li><strong>Messaging API:</strong> LINE Messaging API (@line/bot-sdk), Webhook</li>
+                    <li><strong>Deployment:</strong> Render</li>
+                </ul>
 
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">💡 How to Use:</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Try it out at <strong>@966pjzjb</strong></li>
-                        <li>Type or tap "ดวงประจำวัน" (Daily Horoscope) ➔ Randomly draw 1 card.</li>
-                        <li>Type any general question in your mind ➔ Draw 3 cards (Past - Present - Future).</li>
-                        <li>Type or tap "วิธีใช้งาน" (How to Use) ➔ View bot instructions and guidelines.</li>
-                    </ul>
-                </div>
-                
-                <!-- Project 2 Links (Coding & AddLine) -->
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a href="https://github.com/nameisonpreeya/tarot-bot.git" target="_blank" class="bg-gray-800 text-white hover:bg-gray-900 font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2 text-sm shadow-sm">
-                        <i class="fa-brands fa-github text-lg"></i> Coding
-                    </a>
-                    <a href="https://line.me/R/ti/p/@966pjzjb" target="_blank" class="bg-green-50 text-green-700 hover:bg-green-100 font-medium py-2 px-4 rounded-lg transition-colors border border-green-200 flex items-center gap-2 text-sm shadow-sm">
-                        <i class="fa-brands fa-line text-lg"></i> AddLine
-                    </a>
-                </div>
+                <h4>💡 How to Use:</h4>
+                <ul>
+                    <li>Try it out at <strong>@966pjzjb</strong></li>
+                    <li>Type or tap "ดวงประจำวัน" (Daily Horoscope) ➔ Randomly draw 1 card.</li>
+                    <li>Type any general question in your mind ➔ Draw 3 cards (Past - Present - Future).</li>
+                </ul>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://github.com/nameisonpreeya/tarot-bot.git" target="_blank" class="btn-link btn-pink"><i class="fa-brands fa-github text-lg"></i> Coding</a>
+                <a href="https://line.me/R/ti/p/@966pjzjb" target="_blank" class="btn-link btn-rose"><i class="fa-brands fa-line text-lg"></i> AddLine</a>
+            </div>
 
-                <div class="mt-8 text-right border-t border-gray-100 pt-4">
-                    <button onclick="closeModal('modal-proj-2')" class="bg-navy-700 hover:bg-navy-900 text-white font-medium py-2 px-6 rounded-lg transition-colors">ปิด (Close)</button>
-                </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('modal-proj-2')" class="btn-close-text">ปิด (Close)</button>
             </div>
         </div>
     </div>
 
     <!-- Modal 3: LeKhaFong Production -->
-    <div id="modal-proj-3" class="modal-overlay hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
-            <div class="p-6 md:p-8 relative">
-                <button onclick="closeModal('modal-proj-3')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-                <h3 class="text-2xl font-bold text-navy-900 mb-2 pr-8">LeKhaFong Production: Rental Service System</h3>
-                <p class="text-blue-600 font-semibold mb-6">Role: Backend Developer & Database Designer</p>
+    <div id="modal-proj-3" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="closeModal('modal-proj-3')" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">LeKhaFong Production: Rental Service System</h3>
+            <p class="modal-role">Role: Backend Developer & Database Designer</p>
+            
+            <div class="modal-body">
+                <p>LeKhaFong Production is a mirrorless camera and accessory rental platform (Sony, Canon, Fujifilm) designed to streamline equipment search, booking workflows, contract generation, and return inspections.</p>
                 
-                <div class="space-y-4 text-gray-600 text-sm md:text-base">
-                    <p>LeKhaFong Production is a camera and accessory rental service founded to meet the needs of professional photographers, content creators, and general users who want access to high-quality equipment without the heavy investment of purchasing. The business offers Mirrorless camera rentals alongside accessories like tripods, studio lights, and microphones from leading brands such as Sony, Canon, and Fujifilm. The service scope covers equipment search, item details, product and user management, rentals, and contract creation. The focus is on providing convenient, fast, and reliable service with regularly inspected equipment to ensure maximum user confidence.</p>
-                    
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">🛠️ Tech Stack & Tools</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Database Modeling:</strong> ER Diagrams (Chen)</li>
-                        <li><strong>Documentation:</strong> Data Dictionary</li>
-                    </ul>
+                <h4>🛠️ Tech Stack & Tools</h4>
+                <ul>
+                    <li><strong>Database Modeling:</strong> ER Diagrams (Chen), Relational Schema</li>
+                    <li><strong>Documentation:</strong> Data Dictionary</li>
+                </ul>
 
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">✨ Key Features & Deliverables</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Relational Schema Design:</strong> Designed and transformed ER Diagrams into clear Relational Schemas, defining Primary Keys (PK) and Foreign Keys (FK) to accurately establish data relationships between tables.</li>
-                        <li><strong>Data Dictionary:</strong> Created comprehensive Data Dictionary documentation specifying data types, constraints, and details for every attribute, serving as an immediate standard reference for the development team.</li>
-                        <li><strong>Core Entity Management:</strong> Structured essential primary tables for the rental business, including equipment and brand data (Sony, Canon, Fujifilm), customer information, and rental/return status tracking tables.</li>
-                    </ul>
-                </div>
+                <h4>✨ Key Deliverables</h4>
+                <ul>
+                    <li><strong>Rental Business Logic:</strong> Structured end-to-end rental lifecycle rules covering item availability validation, booking duration, deposit/contract tracking, and equipment return status updates.</li>
+                    <li><strong>Database Design & Normalization:</strong> Transformed conceptual ER Diagrams into normalized Relational Schemas with well-defined Primary Keys (PK) and Foreign Keys (FK).</li>
+                    <li><strong>Data Dictionary:</strong> Authored detailed attribute specifications (data types, constraints, and descriptions) as a standard reference for backend implementation.</li>
+                </ul>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://drive.google.com/file/d/12tSa-nNz-j3igFJb-zpMkh3ljmLHrZ41/view?usp=share_link" target="_blank" class="btn-link btn-pink"><i class="fa-solid fa-file-pdf"></i> Report Phase 1</a>
+                <a href="pr2.html" target="_blank" class="btn-link btn-rose"><i class="fa-solid fa-pr"></i> Preview</a>
+            </div>
 
-                <!-- Project 3 Links -->
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a href="https://drive.google.com/file/d/12tSa-nNz-j3igFJb-zpMkh3ljmLHrZ41/view?usp=share_link" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg transition-colors border border-blue-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-file-pdf"></i> Report Phase 1
-                    </a>
-                    <a href="pr2.html" target="_blank" class="bg-cyan-50 text-cyan-700 hover:bg-cyan-100 font-medium py-2 px-4 rounded-lg transition-colors border border-cyan-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-pr"></i> Preview
-                    </a>
-                </div>
-
-                <div class="mt-8 text-right border-t border-gray-100 pt-4">
-                    <button onclick="closeModal('modal-proj-3')" class="bg-navy-700 hover:bg-navy-900 text-white font-medium py-2 px-6 rounded-lg transition-colors">ปิด (Close)</button>
-                </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('modal-proj-3')" class="btn-close-text">ปิด (Close)</button>
             </div>
         </div>
     </div>
 
     <!-- Modal 4: KAMUTEA Database Management System -->
-    <div id="modal-proj-4" class="modal-overlay hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
-            <div class="p-6 md:p-8 relative">
-                <button onclick="closeModal('modal-proj-4')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-                <h3 class="text-2xl font-bold text-navy-900 mb-2 pr-8">KAMUTEA Database Management System</h3>
-                <p class="text-blue-600 font-semibold mb-6">Role: System Analyst</p>
+    <div id="modal-proj-4" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="closeModal('modal-proj-4')" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">KAMUTEA Database Management System</h3>
+            <p class="modal-role">Role: System Analyst</p>
+            
+            <div class="modal-body">
+                <p>Analyzed and standardized business workflows and enterprise data structures for KAMU KAMU Company Limited, supporting multi-channel beverage sales (storefront, Line Man, Grab, Shopee Food), promotional campaigns, and limited-edition merchandise.</p>
+
+                <h4>🛠️ Tech Stack & Tools</h4>
+                <ul>
+                    <li><strong>Analysis Frameworks:</strong> Business Process Analysis (BPA), 8-Step Transformation Mapping</li>
+                    <li><strong>Data Modeling & Documentation:</strong> Data Mapping, Data Dictionary, Business Rule Specifications</li>
+                    <li><strong>Documentation Tools:</strong> Draw.io, Google Sheets</li>
+                </ul>
                 
-                <div class="space-y-4 text-gray-600 text-sm md:text-base">
-                    <p>KAMU KAMU COMPANY LIMITED is a bubble tea enterprise operating under the brand name KAMU KAMU. Founded in 2011 by a Thai entrepreneur, the brand features a Japanese aesthetic. It currently boasts over 200 branches across Thailand and is expanding globally. Beyond traditional bubble tea, the brand offers beverages crafted from premium teas to share the joy of great taste, and frequently collaborates with other brands to release limited-edition merchandise like keychains and tote bags. Customers can follow news and promotions or make inquiries via their website or Line, and place orders through delivery platforms such as Shopee Food, Line Man, and Grab.</p>
+                <h4>✨ Key Deliverables</h4>
+                <ul>
+                    <li><strong>Business Process Analysis:</strong> Mapped end-to-end operational workflows across storefront POS, third-party delivery integrations, and special merchandise inventory.</li>
+                    <li><strong>8-Step Data Mapping:</strong> Executed structured 8-step transformation mapping to bridge business requirements into a clean, relational database schema.</li>
+                    <li><strong>Business Rule & Data Dictionary:</strong> Defined pricing, promotion, and order constraints alongside a comprehensive Data Dictionary for engineering alignment.</li>
+                </ul>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://drive.google.com/file/d/1Vgzm-VWI6pFXUsnulHz5luoeFxMjwl5J/view?usp=share_link" target="_blank" class="btn-link btn-pink"><i class="fa-solid fa-file-pdf"></i> Report Phase 1</a>
+                <a href="https://drive.google.com/file/d/1G6O14hLlrG7yD6HhzVTGUojS8aoTMsj7/view?usp=share_link" target="_blank" class="btn-link btn-rose"><i class="fa-solid fa-file-pdf"></i> Report Phase 2</a>
+                <a href="pr3.html" target="_blank" class="btn-link btn-fuchsia"><i class="fa-solid fa-pr"></i> Preview</a>
+            </div>
 
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">🛠️ Tech Stack & Tools</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Analysis Frameworks:</strong> Business Process Analysis (BPA), Transformation Mapping (8 Steps), Business Rule Engine Design</li>
-                        <li><strong>Requirement Engineering:</strong> Business Data Requirement Gathering</li>
-                        <li><strong>Data Modeling & Documentation:</strong> Data Dictionary, Data Mapping</li>
-                        <li><strong>Documentation Tools:</strong> Draw.io, Google Sheets</li>
-                    </ul>
-                    
-                    <h4 class="font-bold text-navy-800 text-lg mt-6">✨ Key Features & Deliverables</h4>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Business Process Analysis:</strong> Analyzed and documented business operations, covering both standard beverage sales via delivery platforms and special merchandise management.</li>
-                        <li><strong>Business Rule Definition:</strong> Systematically analyzed and defined business rules—such as promotional conditions, pricing calculations, and sales restrictions for limited-edition items—to ensure comprehensive and standardized logic.</li>
-                        <li><strong>Data Requirement Gathering:</strong> Collected and refined data requirements from stakeholders to establish exactly what data the system must store and process.</li>
-                        <li><strong>8-Step Transformation Mapping:</strong> Executed the 8-step transformation mapping process to accurately design and organize data, bridging business concepts with the technical database structure.</li>
-                        <li><strong>Data Dictionary Creation:</strong> Developed a detailed Data Dictionary specifying data types, constraints, and descriptions, serving as an immediate standard reference manual for developers and database administrators.</li>
-                    </ul>
-                </div>
-
-                <!-- Project 4 Links -->
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a href="https://drive.google.com/file/d/1Vgzm-VWI6pFXUsnulHz5luoeFxMjwl5J/view?usp=share_link" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg transition-colors border border-blue-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-file-pdf"></i> Report Phase 1
-                    </a>
-                    <a href="https://drive.google.com/file/d/1G6O14hLlrG7yD6HhzVTGUojS8aoTMsj7/view?usp=share_link" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg transition-colors border border-blue-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-file-pdf"></i> Report Phase 2
-                    </a>
-                    <a href="pr3.html" target="_blank" class="bg-cyan-50 text-cyan-700 hover:bg-cyan-100 font-medium py-2 px-4 rounded-lg transition-colors border border-cyan-200 flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-pr"></i> Preview
-                    </a>
-                </div>
-
-                <div class="mt-8 text-right border-t border-gray-100 pt-4">
-                    <button onclick="closeModal('modal-proj-4')" class="bg-navy-700 hover:bg-navy-900 text-white font-medium py-2 px-6 rounded-lg transition-colors">ปิด (Close)</button>
-                </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('modal-proj-4')" class="btn-close-text">ปิด (Close)</button>
             </div>
         </div>
     </div>
 
     <!-- Modal 5: Frame Stock Rompho Digital -->
-    <div id="modal-proj-5" class="modal-overlay hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
-            <div class="p-6 md:p-8 relative">
-                <button onclick="closeModal('modal-proj-5')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-                <h3 class="text-2xl font-bold text-navy-900 mb-2 pr-8">Frame Stock Rompho Digital - Inventory Management System</h3>
-                <p class="text-blue-600 font-semibold mb-6">Role: Full Stack Deverloper</p>
+    <div id="modal-proj-5" class="modal-overlay">
+        <div class="modal-content">
+            <button onclick="closeModal('modal-proj-5')" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">Frame Stock Rompho Digital - Inventory Management System</h3>
+            <p class="modal-role">Role: Full Stack Developer</p>
+            
+            <div class="modal-body">
+                <p>A production-ready Client-Server inventory management web application built to track real-time stock levels, pricing, and role-based permissions for a picture frame business:</p>
                 
-                <div class="space-y-4 text-gray-600 text-sm md:text-base">
-                    <p>This project is designed using a Client-Server Architecture, separating the operations into two main components for flexibility and data management security:</p>
-                    
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Frontend:</strong> Developed using Single-page HTML, Tailwind CSS, and Vanilla JavaScript. It serves as a dashboard displaying product tables and supports Role-Based Access Control (Guest users can view stock only, while Staff users must enter a password [123456] to add, reduce, or edit data).</li>
-                        <li><strong>Backend:</strong> Developed with Node.js and Express.js, acting as a RESTful API to handle requests from the frontend and manage the database.</li>
-                        <li><strong>Database:</strong> Uses PostgreSQL hosted on Supabase Cloud, connected via a Connection String to ensure security and 24/7 data storage stability.</li>
-                        <li><strong>Generative AI:</strong> Gemini</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li><strong>Full CRUD & REST API:</strong> Built with Node.js and Express.js to handle Create, Read, Update, and Delete inventory endpoints reliably.</li>
+                    <li><strong>Database Architecture:</strong> Uses cloud-hosted PostgreSQL (Supabase) for persistent, structured storage of product SKUs, dimensions, quantities, and unit prices.</li>
+                    <li><strong>Authentication & Access Control:</strong> Implements Role-Based Access Control separating public Guest view-only access from password-authenticated Staff privileges for stock adjustments and item edits.</li>
+                    <li><strong>Frontend Dashboard:</strong> Responsive single-page dashboard built with HTML, Tailwind CSS, and Vanilla JavaScript.</li>
+                </ul>
+            </div>
+            
+            <div class="modal-links">
+                <a href="https://frame-stock.vercel.app/" target="_blank" class="btn-link btn-pink"><i class="fa-solid fa-globe"></i> Frame Stock Website</a>
+                <a href="https://github.com/nameisonpreeya/Frame-Stock-Front-end.git" target="_blank" class="btn-link btn-rose"><i class="fa-brands fa-github text-lg"></i> Frontend</a>
+                <a href="https://github.com/nameisonpreeya/Frame-Stock-Back-end.git" target="_blank" class="btn-link btn-fuchsia"><i class="fa-brands fa-github text-lg"></i> Backend</a>
+            </div>
 
-                <!-- Project 5 Links -->
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <a href="https://frame-stock.vercel.app/" target="_blank" class="bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium py-2 px-4 rounded-lg transition-colors border border-blue-200 flex items-center gap-2 text-sm shadow-sm">
-                        <i class="fa-solid fa-globe"></i> Frame Stock Website
-                    </a>
-                    <a href="https://github.com/nameisonpreeya/Frame-Stock-Front-end.git" target="_blank" class="bg-gray-800 text-white hover:bg-gray-900 font-medium py-2 px-4 rounded-lg transition-colors border border-gray-700 flex items-center gap-2 text-sm shadow-sm">
-                        <i class="fa-brands fa-github text-lg"></i> Frontend
-                    </a>
-                    <a href="https://github.com/nameisonpreeya/Frame-Stock-Back-end.git" target="_blank" class="bg-gray-800 text-white hover:bg-gray-900 font-medium py-2 px-4 rounded-lg transition-colors border border-gray-700 flex items-center gap-2 text-sm shadow-sm">
-                        <i class="fa-brands fa-github text-lg"></i> Backend
-                    </a>
-                </div>
-
-                <div class="mt-8 text-right border-t border-gray-100 pt-4">
-                    <button onclick="closeModal('modal-proj-5')" class="bg-navy-700 hover:bg-navy-900 text-white font-medium py-2 px-6 rounded-lg transition-colors">ปิด (Close)</button>
-                </div>
+            <div class="modal-footer">
+                <button onclick="closeModal('modal-proj-5')" class="btn-close-text">ปิด (Close)</button>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-navy-900 text-gray-400 py-8 text-center text-sm mt-8 border-t border-navy-700">
-        <p>© 2027 Onpreeya Rompho. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JavaScript for Modals -->
+    <!-- JavaScript สำหรับเปิด/ปิด Modal -->
     <script>
         function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.remove('hidden');
+            document.getElementById(modalId).classList.add('show');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            modal.classList.add('hidden');
+            document.getElementById(modalId).classList.remove('show');
             document.body.style.overflow = 'auto';
         }
 
         window.onclick = function(event) {
             if (event.target.classList.contains('modal-overlay')) {
-                event.target.classList.add('hidden');
+                event.target.classList.remove('show');
                 document.body.style.overflow = 'auto';
             }
         }
 
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
-                const modals = document.querySelectorAll('.modal-overlay');
-                modals.forEach(modal => {
-                    if (!modal.classList.contains('hidden')) {
-                        modal.classList.add('hidden');
-                        document.body.style.overflow = 'auto';
-                    }
+                document.querySelectorAll('.modal-overlay').forEach(modal => {
+                    modal.classList.remove('show');
                 });
+                document.body.style.overflow = 'auto';
             }
         });
     </script>
